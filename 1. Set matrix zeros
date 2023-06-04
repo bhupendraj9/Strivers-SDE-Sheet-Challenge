@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+void setZeros(vector<vector<int>> &matrix)
+{
+	vector<int>zrow;
+	vector<int>zcol;
+	for(int i=0;i<matrix.size();i++)
+	{
+	   for(int j=0;j<matrix[0].size();j++)
+	   {
+		   if(matrix[i][j]==0)
+		   {
+			   zrow.push_back(i);
+			   zcol.push_back(j);
+		   }
+	   }
+	}
+	for(int i=0;i<zrow.size();i++)
+	{
+		for(int j=0;j<matrix[0].size();j++)
+		{
+           matrix[zrow[i]][j]=0;
+		}
+	}
+	for(int i=0;i<zcol.size();i++)
+	{
+		for(int j=0;j<matrix.size();j++)
+		{
+           matrix[j][zcol[i]]=0;
+		}
+	}
+
+}
