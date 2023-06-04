@@ -1,0 +1,17 @@
+#include <bits/stdc++.h> 
+void sort012(int *arr, int n)
+{
+   int ct1=0;
+   int ct0=0;
+   int ct2=0;
+   for(int i=0;i<n;i++)
+   {
+      if(arr[i]==0) ct0++;
+      else if(arr[i]==1) ct1++;
+      else ct2++;
+   }
+   int i=0;
+   while(ct0--) arr[i++]=0;
+    while(ct1--) arr[i++]=1;
+     while(ct2--) arr[i++]=2;
+}
